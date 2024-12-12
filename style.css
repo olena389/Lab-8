@@ -1,0 +1,1783 @@
+/* Загальні стилі */
+* {
+    box-sizing: border-box; /* Додає box-sizing для всіх елементів */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Pathway Extreme", sans-serif;
+    background-color: #f9f9f9; 
+    overflow-x: hidden; /* Додано фон для кращої видимості */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+}
+
+header .logo {
+    font-size: 23px; 
+    font-weight: 650; 
+    color: black; 
+    padding-left: 50px;
+}
+
+header .dot {
+    color: #5CCCC9; 
+}
+
+nav {
+    flex-grow: 1;
+    text-align: center; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    gap: 15px; 
+}
+
+nav ul li a {
+    font-size: 14px; 
+    text-decoration: none;
+    color: #808080;
+    font-weight: 450; /* Зменшена товщина шрифту */
+    padding: 10px; 
+    letter-spacing: 0.2em; /* Відстань між літерами */
+}
+
+nav ul li a:hover {
+    color: #5CCCC9; 
+}
+
+.social-icons {
+    display: flex;
+    gap: 25px; 
+    margin-left: 10px; 
+    padding-right: 90px;
+}
+
+.social-icons img {
+    width: 20px; 
+    height: 20px; 
+}
+
+/* Секція з текстом і зображенням */
+.intro {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh; 
+}
+
+.content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    padding-bottom: 70px;
+}
+
+.content h1 {
+    font-size: 40px; 
+    line-height: 1.5;
+    color: #333333; 
+}
+
+.features {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 40px; /* Increased gap for better spacing */
+    padding-bottom: 30px;
+    margin-top: 80px;
+}
+
+.feature-item {
+    text-align: left; /* Align text to the left */
+    display: flex; /* Change to flex for vertical alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 60px; /* Added padding to match main heading's indentation */
+}
+
+.image-container {
+    width: 50%; /* Висота секції на весь екран */
+    height: 100%; /* Висота секції на весь екран */
+    overflow: hidden; /* Сховати частини, які виходять за межі */
+
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 760px; /* Відстань зліва */
+    background-color: #5CCCC9; /* Зелений колір */
+    color: white;
+    padding: 20px; /* Основний відступ */
+    height: auto; /* Автоматична висота */
+    width: 270px; /* Ширина прямокутника */
+    display: flex;
+    flex-direction: column; /* Вертикальне вирівнювання */
+    align-items: flex-start; /* Вирівнювання по лівому краю */
+    overflow: hidden; /* Сховати вміст, що виходить за межі */
+}
+
+/* Стилі для заголовка */
+.overlay-title {
+    font-family: "Lora", serif; /* Шрифт для заголовка */
+    font-weight: 700; /* Змінено на 700 для звичайної товщини */
+    font-size: 20px; /* Розмір заголовка */
+    padding-left: 15px;
+    color: white; /* Колір тексту заголовка */
+    margin-bottom: -8px; /* Відстань між заголовком та текстом */
+    letter-spacing: 2px; /* Додати відступ між буквами (можете налаштувати значення) */
+}
+
+
+/* Стилі для тексту на overlay */
+.overlay-text {
+    font-family: "Mulish", sans-serif; /* Шрифт для тексту */
+    font-size: 18px; /* Розмір тексту */
+    padding-left: 15px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    color: #DEF5F4; /* Колір тексту */
+    line-height: 1.2; /* Висота рядка для кращого сприйняття тексту */
+    white-space: normal; /* Дозволити нормальний перенос тексту */
+    overflow-wrap: break-word; /* Примусовий перенос слів */
+    margin-top: 10px; /* Відступ зверху для тексту */
+}
+
+.overlay-image {
+    width: 70px !important; /* Ширина зображення */
+    height: 50px !important; /* Висота зображення */
+    padding-left: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+.image {
+    width: 100%;
+    height: 100%; /* Зображення на всю висоту */
+    object-fit: cover; /* Збереження пропорцій зображення */
+}
+
+/* Секція "Про нас" */
+.about {
+    padding: 40px;
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.about .features {
+    display: flex;
+    justify-content: space-around;
+    align-items: left;
+}
+
+.features img {
+    width: 40px; 
+    margin-bottom: 15px; /* Adjusted to ensure the image has space from the heading */
+}
+
+.feature-item h3 {
+    font-family: "Lora", serif;
+    font-weight: 700;
+    font-size: 24px; 
+    color: #333333;
+    margin-bottom: 10px; /* Відступ між заголовком і текстом */
+}
+
+.feature-item p {
+    font-family: "Mulish", sans-serif;
+    color: #808080;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-left: 0; /* Відступ зліва для тексту під заголовком */
+}
+
+/* Заголовки */
+h1, h3 {
+    font-family: "Lora", serif;
+    font-weight: 700; 
+    color: #333333; 
+    line-height: 1.2; 
+}
+
+.mulish-text, h3 {
+    text-align: left; 
+    padding-left: 60px;
+}
+
+/* Стиль для заголовку в intro */
+.intro h1 {
+    font-family: "Lora", serif;
+    font-weight: 600; 
+    font-size: 40px; 
+    color: #333333;   
+    line-height: 1.2; 
+    padding-left: 60px; 
+    padding-top: 100px;
+}
+
+/* Окремий стиль для слів "Creative" та "Design" */
+h3 {
+    font-weight: 700; 
+    font-size: 24px;  
+    color: #333333;   
+    padding-left: 0; /* No left padding for headings */
+    line-height: 0.5; 
+    padding-bottom: -10px ;
+}
+
+/* Стилі для текстів з шрифтом Mulish */
+.mulish-text {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400; 
+    color: #808080; 
+    line-height: 1.5; 
+}
+
+.about {
+    padding: 15px;
+
+}
+
+.about-heading {
+    font-family: "Mulish", sans-serif;
+    color: #5CCCC9;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding-top: 100px;
+}
+
+.about-description {
+    font-family: "Lora", serif;
+    color: #333333;
+    text-align: center;
+    font-size: 45px;
+    line-height: 1;
+    margin-top: 0;
+    padding-bottom: 30px; /* Зменшено відступ знизу для підняття елементів */
+    font-weight: 350;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 0; /* Забираємо зайвий відступ зверху */
+}
+
+.feature {
+    text-align: left; /* Текст по лівому краю */
+    flex: 1;
+    margin-bottom: 0; /* Прибираємо зайвий відступ знизу */
+    padding-left: 150px; /* Відступ зліва для зсуву тексту вправо */
+}
+
+.left-align-text {
+    text-align: left; /* Текст вирівняний по лівому краю */
+    margin-left: -250px; /* Відступ вліво для зсуву тексту */
+    font-family: "Mulish", sans-serif;
+    font-weight: 400; 
+    color: #808080; 
+    line-height: 1.5; 
+    font-size: 18px;
+}
+
+.left-align-text-two{
+text-align: left; /* Текст вирівняний по лівому краю */
+margin-left: -80px; /* Відступ вліво для зсуву тексту */
+font-family: "Mulish", sans-serif;
+font-weight: 400; 
+color: #808080; 
+line-height: 1.5; 
+font-size: 18px;
+margin-top: -255px; /* Піднімаємо текст вгору */
+}
+
+.left-align-text-three {
+    text-align: left; /* Текст вирівняний по лівому краю */
+    margin-left: -80px; /* Відступ вліво для зсуву тексту */
+    font-family: "Mulish", sans-serif;
+    font-weight: 400; 
+    color: #808080; 
+    line-height: 1.5; 
+    font-size: 18px;
+    margin-top: 0; /* Відсутній відступ зверху */
+}
+
+.icon-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px; /* Зсуваємо зображення ліворуч */
+  }
+  
+  .icon-container-two{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -100px; /* Зсуваємо зображення ліворуч */
+  }
+
+  .icon-container-three { 
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 70px; /* Відступ для вирівнювання зображення */
+    margin-bottom: 10px; /* Відступ під зображенням, щоб був простір до тексту */
+    margin-top: -255px; /* Піднімаємо весь контейнер вгору */
+}
+
+
+.icon {
+    width: 40px;
+    height: auto;
+}
+
+
+.left-side-bg {
+    position: absolute;
+    top: 736px; /* Відступ від верхнього краю */
+    left: 0;
+    width: 50%; /* Ліва сторона на половину ширини сторінки */
+    height: 800px; /* Збільшена висота блоку */
+    background-color: #f5f7f8; /* Колір фону */
+    z-index: -1; /* Щоб блок був позаду іншого контенту */
+}
+
+
+.text-description {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400; 
+    color: #808080; 
+    line-height: 1.5; 
+    font-size: 18px;
+}
+
+.text-heading {
+    font-family: "Lora", serif;
+    font-weight: 700;  
+    font-size: 24px;  
+    color: #333333;   
+    padding-left: 0; /* No left padding for headings */
+    line-height: 1; 
+    padding-bottom: -10px;
+}
+
+.highlight-number {
+    color: #5CCCC9; /* Для числа 15 встановлено колір #5CCCC9 */
+}
+
+/* Style for the added photo */
+.office {
+    width: 102%; /* Зменшує ширину на 50% */
+    height: auto; /* Зберігає пропорції */
+    margin-top: 60px; /* Додає відступ зверху */
+    padding-left: 260px;
+}
+
+.peop {
+    width: 150%; /* Зменшує ширину на 50% */
+    height: auto; /* Зберігає пропорції */
+    margin-top: -5px; /* Зменшуємо відступ зверху */
+    padding-right: 280px;
+}
+
+.flow {
+    width: 127%; /* Зменшує ширину на 50% */
+    height: auto; /* Зберігаємо пропорції */
+    margin-top: 140px; /* Додаємо відступ зверху */
+    padding-right: 160px; /* Зменшуємо відступ справа */
+    float: right; /* Розташовуємо фото з правого боку */
+}
+
+.chair {
+    width: 127%; /* Зменшує ширину на 50% */
+    height: auto; /* Зберігаємо пропорції */
+    margin-top: 0px; /* Додаємо відступ зверху */
+    padding-right: 390px; /* Зменшуємо відступ справа */
+    float: right; /* Розташовуємо фото з правого боку */
+}
+
+.comput{
+    width: 66.7%; /* Зменшує ширину на 50% */
+    height: auto; /* Зберігаємо пропорції */
+    margin-top: -257px; /* Додаємо відступ зверху */
+    padding-right: 160px; /* Зменшуємо відступ справа */
+    float: right; /* Розташовуємо фото з правого боку */ 
+}
+
+.pricing {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Makes sure the section takes up the full height of the viewport */
+}
+
+.pricing-heading {
+    font-family: "Mulish", sans-serif;
+    color: #5CCCC9;
+    font-size: 16px;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 580px; /* Moves the heading to the bottom */
+    left: 152px; /* Moves the heading to the left */
+    width: 80%;
+}
+
+.pricing-description {
+    font-family: "Lora", serif;
+    color: #333333;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 350;
+    position: absolute;
+    text-align: center;
+    left: -760px; /* Moves the description to the left */
+    bottom: 440px; /* Moves the heading to the bottom */
+    width: 200%;
+}
+
+
+/* Container for the pricing plans */
+.pricing-table { 
+    display: flex;
+    gap: 0; /* Remove gap between the plans */
+    padding-left: 0;
+    padding-top: 330px; /* Adjusted for no extra spacing */
+    justify-content: center; /* Center the pricing plans horizontally */
+}
+
+/* Styling for each pricing plan */
+.pricing-plan {
+    width: 460px; /* Width remains the same */
+    height: 500px; /* Increased height to make the table twice as long */
+    padding: 5px 35px; /* Decreased vertical padding to move content up (NEW) */
+    border-radius: 0; /* Sharp corners */
+    text-align: left; /* Align text to the left */
+    color: white;
+    margin: 0; /* Remove margin between plans */
+}
+
+/* Styling for the plan titles */
+.pricing-plan h2 {
+    font-size: 40px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    font-family: "Lora", serif; /* Apply Lora font-family */
+    font-weight: 400; /* Reduced font-weight for lighter headers (NEW) */
+}
+
+/* Styling for the price */
+.pricing-plan .price {
+    font-size: 35px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Styling for the list of features */
+.pricing-plan ul {
+    list-style: none;
+    font-size: 38px;
+    margin-bottom: 70px;
+}
+
+.pricing-plan ul li {
+    font-size: 20px;
+    padding-top: 10px; /* Adjusted padding to move text slightly up (NEW) */
+    margin: 10px 0;
+    font-family: "Mulish", sans-serif; /* Apply Mulish font-family */
+}
+
+/* Styling for the buttons */
+.pricing-plan button {
+    padding: 15px 30px; /* Increased padding to make the button larger (NEW) */
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 18px; /* Increased font size for larger text (NEW) */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: "Mulish", sans-serif; /* Apply Mulish font-family */
+}
+
+/* Button hover effect */
+.pricing-plan button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Plan background colors */
+.free {
+    background-color: #5CCCC9;
+}
+
+.premium {
+    background-color: #6ebfb5;
+}
+
+.enterprise {
+    background-color: #ade498;
+}
+
+
+/* Container for the About Us section */
+.about-section-tt {
+    max-width: 600px; /* Adjust the width as needed */
+    text-align: left; /* Align text to the left */
+    padding-right: 0;
+    padding-left: 70px; /* Ensure some padding on the left */
+    padding-top: 240px;
+    margin: 0;
+}
+
+/* Styling for the About Us heading */
+.about-heading-tt {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5CCCC9;
+    font-family: "Mulish", sans-serif;
+    text-transform: uppercase;
+}
+
+/* Styling for the About Us description */
+.about-description-tt {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: 300; /* Set font weight to 400 for slightly thicker text */
+    font-family: "Lora", serif;
+    color: #333;
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+
+/* Container for all features */
+.features-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Align to the right */
+    gap: 20px;
+}
+
+
+/* Text container styling */
+.feature-content {
+    text-align: left;
+    padding-right: 83px;
+    padding-top: 10px;
+    
+}
+
+.feature-content h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.feature-content p {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400; 
+    color: #808080; 
+    line-height: 1.5; 
+    font-size: 18px;
+}
+
+
+  .iconki-cont-two{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 150px; /* Відступ для вирівнювання зображення */
+    margin-bottom: 20px; /* Відступ під зображенням, щоб був простір до тексту */
+    margin-top: -230px; /* Піднімаємо весь контейнер вгору */
+  }
+
+  .iconki-cont-three { 
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px; /* Відступ для вирівнювання зображення */
+    margin-bottom: 20px; /* Відступ під зображенням, щоб був простір до тексту */
+    margin-top: -230px; /* Піднімаємо весь контейнер вгору */
+}
+
+.iconki {
+    width: 20px;
+    height: auto;
+}
+
+/* Container for positioning */
+.container {
+    position: relative; /* Щоб використовувати абсолютне позиціонування для зображення */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Image Section */
+.office-photo {
+    width: 70%; /* Зменшено розмір */
+    height: auto;
+    position: absolute; /* Абсолютне позиціонування для перекриття */
+    top: -50px; /* Регулює положення зображення відносно контейнера */
+    left: -200px; /* Зсуває зображення ще більше вліво */
+    z-index: 1; /* Розміщення зображення перед зеленим блоком */
+}
+
+/* Highlighted Box */
+.highlighted-box {
+    background-color: #5CCCC9; /* Зелений колір */
+    padding: 200px; /* Збільшено внутрішній відступ удвічі */
+    left: 420px;
+    height:590px;
+    max-width: 3400px; /* Удвічі більше ширини */
+    margin-right: 0; /* Встановлення блоку на правий край */
+    text-align: right; /* Вирівнювання тексту праворуч */
+    position: relative;
+    z-index: 0; /* Розміщення зеленого блоку під зображенням */
+    margin-top: 200px; /* Збільшений відступ згори для переміщення блоку вниз */
+}
+
+
+/* Main Text */
+.main-text {
+    font-family: "Mulish", sans-serif;
+    font-size: 2.2rem; /* Збільшено розмір шрифту */
+    text-align: left;
+    line-height: 1.7; /* Трохи збільшено міжрядковий інтервал */
+    color: #fff; /* Білий текст для контрасту */
+    margin-bottom: 20px;
+    margin-top: -150px; /* Зменшений верхній відступ, щоб підняти текст */
+    margin-left: -70px; /* Зменшено лівий відступ, щоб перемістити текст вліво */
+    font-weight: 500;
+}
+
+/* Profile Section */
+.profile-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Зменшено відступ для підйому тексту */
+}
+
+.profile-photo {
+    width: 90px; /* Збільшено розмір фото */
+    height: 90px; /* Збільшено висоту фото */
+    border-radius: 50%;
+    margin-left: -70px;
+    margin-right: 20px; /* Трохи більше простору між фото та текстом */
+}
+
+.profile-info {
+    text-align: left;
+}
+
+.profile-name {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.1rem; /* Збільшено розмір шрифту імені */
+    font-weight: 900;
+    font-weight: bold;
+    color: #fff; /* Білий текст для контрасту */
+}
+
+.profile-title {
+    font-family: "Mulish", sans-serif;
+    font-size: 1rem; /* Збільшено розмір шрифту титулу */
+    font-weight: 600;
+    color: #DEF5F4; /* Світліший відтінок білого для різноманітності */
+}
+
+
+/* Мобільні стилі */
+@media (max-width: 768px) {
+    .code-block {
+        font-size: 12px; /* Зменшено шрифт для мобільних */
+        padding: 8px; /* Менші відступи */
+        overflow-x: hidden;
+    }
+
+    header .logo {
+        font-size: 16px; 
+        font-weight: 650; 
+        color: black; 
+        padding-left: 5px;
+        padding-bottom: 350px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        margin-top: -130px; /* Піднімаємо меню вище */
+    }
+    
+    ul li {
+        list-style: none;
+        margin: -5px 0;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        color: #000;
+        font-size: 10px;
+        padding: 3px 8px;
+    }
+    
+    .dropdown .arrow-down {
+        margin-left: 2px;
+    }
+    .social-icons {
+        display: flex;
+        gap: 10px; /* Зменшення відстані між фотографіями */
+        margin-left: 8px;
+        padding-right: 0px;
+        padding-bottom: 345px;
+    }
+    
+    .social-icons img {
+        width: 15px;
+        height: 15px;
+    }
+  
+
+    .intro {
+        display: inline;
+        height: 100%; 
+        width: 100%;
+    }
+    
+    /* Стиль для заголовку в intro */
+    .intro h1 {
+        font-weight: 600; 
+        font-size: 22px; 
+        line-height: 1.2; 
+        padding-left: 25px; 
+        padding-top: 10px;
+    }
+
+    .content {
+        width: 100%;
+        flex-direction: column;
+        padding-left: 0px;
+        padding: 0px;
+        flex: 1;
+    }
+
+    .image-container {
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        flex: 1;
+        padding-top: 250px;
+    }
+
+    .overlay {
+        left: 0px; /* Відстань зліва */
+        padding: 20px 0px 10px 0px;
+        width: 150px; /* Ширина прямокутника */
+        bottom: 152px;
+    }
+
+    .overlay-image {
+        width: 30px !important; /* Ширина зображення */
+        height: 20px !important; /* Висота зображення */
+        padding-left: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+    }
+
+    /* Стилі для заголовка */
+    .overlay-title {
+        font-weight: 700; /* Змінено на 700 для звичайної товщини */
+        font-size: 8px; /* Розмір заголовка */
+        padding-left: 15px;
+    } 
+
+/* Стилі для тексту на overlay */
+.overlay-text {
+    font-family: "Mulish", sans-serif; /* Шрифт для тексту */
+    font-size: 10px; /* Розмір тексту */
+    padding-left: 15px;
+    text-align: left; /* Вирівнювання тексту по лівому краю */
+    line-height: 1.2; /* Висота рядка для кращого сприйняття тексту */
+    white-space: normal; /* Дозволити нормальний перенос тексту */
+    overflow-wrap: break-word; /* Примусовий перенос слів */
+    margin-top: 10px; /* Відступ зверху для тексту */
+}
+
+.features {
+    display: flex;
+    justify-content: flex-start; /* Вирівнювання всіх елементів ліворуч */
+    padding: 0; /* Прибрано зайві падінги */
+    margin: 0; /* Прибрано зайві відступи */
+    padding-bottom: 20px; /* Відступ знизу */
+    position: relative; /* Додано для роботи з 'top' */
+    top: -30px; /* Піднімаємо блок угору */
+}
+
+.feature-item {
+    text-align: left; /* Вирівнювання тексту ліворуч */
+    display: flex; /* Гнучке вирівнювання */
+    flex-direction: column; /* Вертикальне розташування елементів */
+    align-items: flex-start; /* Вирівнювання елементів ліворуч */
+    margin-left: 0; /* Прибрано зайві відступи зліва */
+    padding-left: 10px; /* Відступ зліва */
+    position: relative; /* Додано для роботи з 'top' */
+    top: 40px; /* Додаткове підняття, якщо потрібно */
+}
+
+
+.about {
+    padding: 5px;
+}
+
+.about-heading {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-top: 0px;
+}
+
+.about-description {
+    text-align: center;
+    font-size: 21px;
+    line-height: 1;
+    margin-top: 0;
+    padding-bottom: 30px; /* Зменшено відступ знизу для підняття елементів */
+    font-weight: 350;
+}
+
+
+.features-container {
+    display: flex;
+    flex-direction: column; /* Розташування елементів вертикально */
+    line-height: 2;
+    font-size: 21px;
+    margin-top: 0;
+    position: relative;
+}
+
+/* Видаляємо псевдоелемент з вертикальною лінією */
+.features-container::before {
+    content: none;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column; /* Вирівнюємо текст і іконку вертикально */
+    align-items: center; /* Центруємо кожен елемент */
+    text-align: center;
+    font-size: 21px;
+    position: relative;
+    width: 60%; /* Ширина блоку */
+}
+
+.left-align-text {
+    width: 500px;
+    text-align: center; /* Текст вирівняний по лівому краю */
+    margin-left: -250px; /* Відступ вліво для зсуву тексту */
+    font-weight: 0; 
+    line-height: 1.5; 
+    font-size: 18px;
+    padding-left: 250px;
+}
+
+.left-align-text-two{
+    text-align: left; /* Текст вирівняний по лівому краю */
+    margin-left: -200px; /* Відступ вліво для зсуву тексту */
+    text-align: center;
+    font-weight: 400; 
+    line-height: 1.5; 
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 0; /* Відсутній відступ зверху */
+    
+}
+
+.left-align-text-three {
+    width: 500px;
+    text-align: left; /* Текст вирівняний по лівому краю */
+    margin-left: -200px; /* Відступ вліво для зсуву тексту */
+    text-align: center;
+    font-weight: 400; 
+    line-height: 1.5; 
+    font-size: 18px;
+    margin-top: 140px; /* Відсутній відступ зверху */
+    padding-right: 100px;
+}
+/* Окремий стиль для слів "Creative" та "Design" */
+h3 {
+    text-align: center;
+    font-weight: 700; 
+    font-size: 24px;  
+    color: #333333;   
+    padding-left: 0; /* No left padding for headings */
+    line-height: 1; 
+    padding-bottom: -50px ;
+    padding-right: 20px;
+}
+.text-description {
+    width: 300px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400; 
+    color: #808080; 
+    line-height: 1.5; 
+    font-size: 18px;
+    padding-right: 20px;
+}
+
+.text-heading {
+    width: 300px;
+    font-family: "Lora", serif;
+    font-weight: 700;  
+    font-size: 25px;  
+    color: #333333;   
+    padding-left: 0; /* No left padding for headings */
+    line-height: 1; 
+    padding-bottom: -10px;
+    padding-right: 20px;
+}
+
+.highlight-number {
+    color: #5CCCC9; /* Для числа 15 встановлено колір #5CCCC9 */
+}
+
+.icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    margin-left: -20px;
+    margin-bottom: 20px; /* Відступ під іконкою */
+}
+
+.icon-container-two{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -20px; /* Зсуваємо зображення ліворуч */
+  }
+
+  .icon-container-three {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; /* Використовуємо absolute */
+    left: -40px; /* Переміщаємо контейнер ліворуч */
+    margin-top: 50px; /* Піднімаємо весь контейнер вгору */
+}
+
+
+.office {
+    width: 216%; /* Оптимальна ширина для збереження пропорцій */
+    height: auto; /* Зберігає пропорції */
+    position: absolute; /* Абсолютне позиціонування */
+    bottom: -866px; /* Розташування внизу сторінки */
+    left: -44%; /* Зміщення від лівого краю */
+    z-index: 1; /* Розташовує фото під іншими елементами */
+}
+
+.peop {
+    width: 101%; /* Оптимальна ширина */
+    height: 34.5; /* Зберігає пропорції */
+    position: absolute; /* Абсолютне позиціонування */
+    bottom: -780px; /* Відступ від низу (регулюйте за потребою) */
+    left: -5%; /* Зміщення від правого краю */
+    z-index: -1; /* Розташовує фото під іншими елементами */
+    padding-right: 0;
+}
+
+.flow {
+    width: 400%; /* Оптимальна ширина */
+    height: auto; /* Зберігає пропорції */
+    padding: 0; /* Прибрано некоректний негативний відступ справа */
+    float: right; /* Фото розташоване праворуч */
+}
+
+.chair {
+    width: 420%; /* Оптимальна ширина */
+    height: auto; /* Зберігає пропорції */
+    padding: 0; /* Прибрано некоректний негативний відступ справа */
+    float: right; /* Фото розташоване праворуч */
+    position: relative; /* Додаємо relative для використання top/bottom/left */
+    bottom: 110px; /* Переміщаємо фото вниз, коригуйте значення за потреби */
+    z-index: -1; /* Розташовує фото під іншими елементами */
+    left: -320%; /* Зсуває фото вліво */
+}
+
+
+.comput {
+    width: 380%; /* Оптимальна ширина */
+    height: auto; /* Зберігає пропорції */
+    margin-top: -347px; /* Відступ зверху */
+    margin-left: 157px; /* Відступ для зсуву вправо */
+    padding: 0; /* Прибрано некоректний негативний відступ справа */
+    float: right; /* Фото розташоване праворуч */
+}
+
+
+.pricing {
+    position: relative;
+    text-align: center;
+    height: 100vh; /* Makes sure the section takes up the full height of the viewport */
+}
+
+.pricing-heading {
+    font-family: "Mulish", sans-serif;
+    color: #5CCCC9;
+    font-size: 14px;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 450px; /* Залишаємо відстань від низу */
+    left: 40px; /* Переміщаємо заголовок ліворуч */
+    width: 80%;
+}
+
+
+.pricing-description {
+    font-family: "Lora", serif;
+    color: #333333;
+    font-size: 19px;
+    line-height: 1;
+    font-weight: 350;
+    position: absolute;
+    text-align: center;
+    left: -160px; /* Moves the description to the left */
+    bottom: 395px; /* Moves the heading to the bottom */
+    width: 200%;
+}
+
+
+/* Container for the pricing plans */
+.pricing-table { 
+    display: flex;
+    flex-direction: column; /* Розташування таблиць одна під одною */
+    padding-left: 0;
+    padding-top: 220px; /* Відступ зверху */
+    justify-content: center; /* Центруємо таблиці вертикально */
+    align-items: center; /* Центруємо таблиці по горизонталі */
+    text-align: left;
+    transform: scale(0.9); /* Зменшуємо таблиці до 80% від їх розміру */
+}
+
+/* Individual pricing tables */
+.pricing-table > div {
+    width: 90%; /* Задаємо ширину кожної таблиці */
+    max-width: 400px; /* Обмеження максимальної ширини */
+    height: auto; /* Зберігаємо пропорції */
+    padding: 20px; /* Внутрішній відступ */
+    color: #fff; /* Білий текст для контрасту з фоном */
+    font-family: "Mulish", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Styling for each pricing plan */
+.pricing-plan {
+    width: 100px; /* Width remains the same */
+    height: 100px; /* Increased height to make the table twice as long */
+    padding: 2px 15px; /* Decreased vertical padding to move content up (NEW) */
+    border-radius: 0; /* Sharp corners */
+    text-align: left; /* Align text to the left */
+    color: white;
+    margin: 0; /* Remove margin between plans */
+}
+
+/* Styling for the plan titles */
+.pricing-plan h2 {
+    font-size: 30px;
+    padding-right: 10px;
+    margin-bottom: -15px; /* Зменшено відступ знизу, щоб підняти заголовок */
+    margin-top: -10px; /* Додано відступ зверху для підняття заголовка */
+    font-family: "Lora", serif; /* Apply Lora font-family */
+    font-weight: 400; /* Reduced font-weight for lighter headers */
+}
+
+/* Styling for the price */
+.pricing-plan .price {
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Styling for the list of features */
+.pricing-plan ul {
+    list-style: none;
+    align-items: flex-start;
+    font-size: 38px;
+    margin-bottom: 40px; /* Зменшено відстань між списком і наступними елементами */
+    margin-top: 10px; /* Зменшено відстань зверху */
+    text-align: left; /* Вирівнюємо текст по лівому краю */
+}
+
+.pricing-plan ul li {
+    font-size: 20px;
+    padding-top: 5px; /* Зменшено padding-top для зменшення відстані між текстами */
+    margin: 5px 0; /* Зменшено margin для зменшення відстані між елементами списку */
+    font-family: "Mulish", sans-serif; /* Apply Mulish font-family */
+    text-align: left; /* Вирівнюємо текст по лівому краю */
+}
+
+/* Styling for the buttons */
+.pricing-plan button {
+    padding: 15px 30px; /* Increased padding to make the button larger (NEW) */
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 18px; /* Increased font size for larger text (NEW) */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: "Mulish", sans-serif; /* Apply Mulish font-family */
+}
+
+/* Container for the About Us section */
+.about-section-tt {
+    max-width: 600px; /* Adjust the width as needed */
+    text-align: left; /* Align text to the left */
+    padding-right: 0;
+    padding-left: 15px; /* Ensure some padding on the left */
+    padding-top: 5px;
+    margin: 0;
+}
+
+/* Styling for the About Us description */
+.about-description-tt {
+    font-size: 1.5rem; /* Зменшено розмір шрифту */
+    text-align: center;
+    font-weight: 400; /* Встановлено нормальну товщину шрифту */
+    font-family: "Lora", serif;
+    color: #333;
+    line-height: 1.4; /* Трохи збільшено line-height для зручності читання */
+    margin-top: 0;
+}
+
+/* Container for all features */
+.features-section {
+    display: flex;
+    flex-direction: column; /* Переміщуємо елементи в стовпчик */
+    align-items: center; /* Вирівнюємо елементи по центру */
+    gap: 20px; /* Відстань між елементами */
+}
+
+/* Text container styling */
+.feature-content {
+    text-align: center; /* Вирівнюємо текст по центру */
+    padding-right: 5px; /* Трохи зменшуємо відступ справа */
+    padding-top: 10px; /* Зменшений відступ зверху */
+    margin-top: -60px; /* Переміщаємо текст трохи вниз під іконку */
+}
+
+/* Styling for the title */
+.feature-content h3 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 70px; /* Менший відступ зверху для заголовка */
+    padding-left: 30px;
+}
+
+/* Styling for the paragraph */
+.feature-content p {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    color: #808080;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+/* Icon container styling */
+.iconki-cont-two {
+    width: 90px; /* Зменшена ширина контейнера іконки */
+    height: 90px; /* Зменшена висота контейнера іконки */
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Відступ між іконкою та текстом */
+    margin-left: 145px; /* Переміщає іконку в праву частину */
+    margin-top: 20px; /* Додано відступ зверху для того, щоб перемістити іконку вниз */
+}
+
+.iconki-cont-three {
+    width: 90px; /* Зменшена ширина контейнера іконки */
+    height: 90px; /* Зменшена висота контейнера іконки */
+    border-radius: 50%;
+    background-color: #5CCCC9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; /* Відступ між іконкою та текстом */
+    margin-left: 100px; /* Переміщає іконку в праву частину */
+    margin-top: 10px; /* Додано відступ зверху для того, щоб перемістити іконку вниз */
+}
+
+/* Container for positioning */
+.container {
+    position: relative; /* Щоб використовувати абсолютне позиціонування для зображення */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Image Section */
+.office-photo {
+    width: 100%; /* Зменшено розмір */
+    height: auto;
+    position: absolute; /* Абсолютне позиціонування для перекриття */
+    top: 40px; /* Регулює положення зображення відносно контейнера */
+    left: 0px; /* Зсуває зображення вліво */
+    z-index: 1; /* Розміщення зображення перед зеленим блоком */
+}
+
+/* Highlighted Box */
+.highlighted-box {
+    background-color: #5CCCC9; /* Зелений колір */
+    padding: 100px; /* Зменшено внутрішній відступ */
+    height: 180px; /* Зменшена висота */
+    max-width: 400px; /* Максимальна ширина */
+    position: absolute; /* Абсолютне позиціонування для точного розташування */
+    top: 110px; /* Розташування під зображенням */
+    left: -80px; /* Зсув вліво */
+    z-index: 0; /* Розміщення зеленого блоку під зображенням */
+    text-align: right; /* Вирівнювання тексту праворуч */
+}
+
+/* Main Text */
+.main-text {
+    font-family: "Mulish", sans-serif;
+    font-size: 0.9rem; /* Зменшений розмір шрифту */
+    text-align: left;
+    line-height: 1; /* Лінійна висота для однорядкового тексту */
+    color: #fff; /* Білий текст для контрасту */
+    margin-bottom: 20px;
+    margin-top: -80px; /* Верхній відступ залишається */
+    margin-left: -5px; /* Лівий відступ залишається */
+    font-weight: 500;
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* Profile Section */
+.profile-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Зменшено відступ для підйому тексту */
+}
+
+.profile-photo {
+    width: 60px; /* Збільшено розмір фото */
+    height: 60px; /* Збільшено висоту фото */
+    border-radius: 50%;
+    margin-left: -5px;
+    margin-right: 20px; /* Трохи більше простору між фото та текстом */
+}
+
+.profile-info {
+    text-align: left;
+}
+
+/* Profile Name */
+.profile-name {
+    font-family: "Mulish", sans-serif;
+    font-size: 0.7rem; /* Збільшено розмір шрифту імені */
+    font-weight: bold; /* Тільки один font-weight */
+    color: #fff; /* Білий текст для контрасту */
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* Profile Title */
+.profile-title {
+    font-family: "Mulish", sans-serif;
+    font-size: 0.6rem; /* Збільшено розмір шрифту титулу */
+    font-weight: 600;
+    color: #DEF5F4; /* Світліший відтінок білого для різноманітності */
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+}
+
+
+
+/* Стилі для планшетів */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header .logo {
+        font-size: 25px; 
+        font-weight: 650; 
+        color: black; 
+        padding-left: 5px;
+        padding-bottom: 350px;
+    }
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        margin-top: -100px; /* Піднімаємо меню вище */
+    }
+    
+    ul li {
+        list-style: none;
+        margin: -5px 0;
+    }
+    
+    nav ul li a {
+    font-size: 23px;
+    }
+    
+    .social-icons {
+        display: flex;
+        gap: 10px; /* Зменшення відстані між фотографіями */
+        margin-left: 8px;
+        padding-right: 80px;
+        padding-bottom: 340px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+        padding-top: 360px;
+    }
+    
+
+    .image-container {
+        flex-direction: row;
+        width: 110%;
+        height: 110%;
+        flex: 1;
+        padding-top: 300px;
+        padding-left: 30px;
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: -106px; /* Зсунути вниз */
+        left: 415px;
+        padding: 20px;
+        padding-top: 40px;
+    }
+    
+    /* Стилі для тексту на overlay */
+    .overlay-text {
+        font-size: 16px; /* Розмір тексту */
+    }
+    
+    .about-heading {
+        font-size: 18px;
+        padding-top: 200px;
+        padding-right: 50px;
+    }
+    
+    .about-description {
+        font-size: 35px;
+        line-height: 1;
+        padding-right: 50px;
+    }
+
+    .feature {
+        display: flex;
+        flex-direction: column; /* Вирівнюємо текст і іконку вертикально */
+        align-items: flex-start; /* Вирівнюємо вміст ліворуч */
+        text-align: left;
+        font-size: 21px;
+        position: relative;
+        width: auto; /* Автоматична ширина */
+        padding: 0; /* Прибираємо зайві відступи */
+        margin-left: 0; /* Гарантуємо, що немає зсуву */
+    }
+    
+    .left-align-text {
+        width: 100%; /* Використовуємо повну ширину контейнера */
+        text-align: left; /* Текст вирівняний по лівому краю */
+        bottom: 20px;
+        padding: 20px 20px 0 5px; /* Додаємо внутрішній відступ зверху та з боків */
+        font-size: 18px; /* Розмір тексту */
+        line-height: 1.5; /* Висота рядка */
+    }
+    
+    
+    .left-align-text-two {
+        width: 100%;
+        text-align: left; /* Текст вирівняний по лівому краю */
+        margin: 0;
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-left: -10px; /* Зміщує весь блок вліво */
+    }
+    
+    
+    .left-align-text-three {
+        width: 100%;
+        text-align: left;
+        margin: 0;
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 1.5;
+        padding-left: 5px;
+    }
+    
+    h3 {
+        text-align: left; /* Вирівнюємо заголовки вліво */
+        font-weight: 700; 
+        font-size: 24px;  
+        color: #333333;   
+        margin: 10px 0; /* Налаштовуємо відступи */
+        padding: 0;
+    }
+    
+    .text-description {
+        width: auto; /* Автоматична ширина */
+        font-family: "Mulish", sans-serif;
+        font-weight: 400; 
+        color: #808080; 
+        line-height: 1.5; 
+        font-size: 20px;
+        padding-top: 20px; /* Відступ зверху */
+        margin: 0;
+    }
+
+    .text-heading {
+        width: 300px;
+        font-family: "Lora", serif;
+        font-weight: 700;  
+        font-size: 25px;  
+        color: #333333;   
+        padding-left: 0; /* No left padding for headings */
+        line-height: 1; 
+        padding-bottom: -10px;
+        padding-right: 20px;
+    }
+    
+    .icon-container {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0; /* Відступи між іконками */
+        position: relative; /* Відносне позиціонування */
+        left: 0; /* Розміщуємо вліво */
+    }
+
+    .icon-container-two, .icon-container-three {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0; /* Відступи між іконками */
+        position: relative; /* Відносне позиціонування */
+        left: 5px; /* Розміщуємо вліво */
+    }
+    
+    .office {
+        width: 180%; /* Оптимальна ширина для збереження пропорцій */
+        height: auto; /* Зберігає пропорції */
+        position: absolute; /* Абсолютне позиціонування */
+        bottom: -678px; /* Розташування внизу сторінки */
+        left: 23%; /* Зміщення від лівого краю */
+        z-index: 1; /* Розташовує фото під іншими елементами */
+    }
+    
+    .peop {
+        width: 190%; /* Оптимальна ширина */
+        height: auto; /* Зберігає пропорції */
+        position: absolute; /* Абсолютне позиціонування */
+        bottom: -420px; /* Відступ від низу (регулюйте за потребою) */
+        left: -10%; /* Зміщення від правого краю */
+        z-index: -1; /* Розташовує фото під іншими елементами */
+    }
+    
+    .flow {
+        width: 70%; /* Оптимальна ширина */
+        height: auto; /* Зберігає пропорції */
+        padding: 0;
+        padding-bottom: 300px;
+        padding-right: 0; /* Прибираємо відступ справа */
+        margin-left: -150px; /* Зміщуємо блок вліво на 100px */
+    }
+    
+    .chair {
+        width: 100%; /* Оптимальна ширина */
+        height: auto; /* Зберігає пропорції */
+        padding: 0; /* Прибрано некоректний негативний відступ справа */
+        float: right; /* Фото розташоване праворуч */
+        position: relative; /* Додаємо relative для використання top/bottom/left */
+        bottom: 310px; /* Переміщаємо фото вгору, коригуйте значення за потреби */
+        z-index: 1; /* Розташовує фото під іншими елементами */
+        right: 110%; /* Зсуває фото вліво */
+    }
+    
+    
+    .comput {
+        width: 100%; /* Оптимальна ширина */
+        height: auto; /* Зберігає пропорції */
+        margin-top: -867px; /* Зміщує елемент вгору */
+        margin-left: -15px; /* Зміщує елемент вліво на 15px */
+        margin-right: 165px; /* Залишає відступ справа */
+        padding: 0;
+        float: right; /* Фото розташоване праворуч */
+    }
+    
+    .pricing-heading {
+        font-size: 18px;
+        position: absolute;
+        margin-bottom: 90px;
+        bottom: 720px; /* Залишаємо відстань від низу */
+        left: 60px; /* Переміщаємо заголовок ліворуч */
+        width: 80%;
+    }
+    
+    
+    .pricing-description {
+        font-size: 35px;
+        line-height: 1;
+        font-weight: 350;
+        position: absolute;
+        text-align: center;
+        left: -400px; /* Moves the description to the left */
+        bottom: 700px; /* Moves the heading to the bottom */
+        width: 200%;
+    }
+    
+/* Container for the pricing plans */
+.pricing-table { 
+    display: flex;
+    gap: 0; /* Remove gap between the plans */
+    padding-top: 370px; /* Відступ зверху для опускання таблиці вниз */
+    justify-content: flex-start; /* Вирівнюємо елементи до лівого краю */
+}
+
+
+/* Styling for each pricing plan */
+.pricing-plan {
+    width: 290px; /* Зменшена ширина таблиці */
+    height: 420px; /* Збережено висоту таблиці */
+    padding: 5px 20px; /* Зменшено вертикальні відступи */
+    border-radius: 0; /* Sharp corners */
+    text-align: left; /* Align text to the left */
+    margin: 0; /* Remove margin between plans */
+}
+
+/* Styling for the plan titles */
+.pricing-plan h2 {
+    font-size: 30px; /* Зменшено розмір шрифта */
+    padding-right: 20px;
+    margin-bottom: 10px;
+    font-family: "Lora", serif; /* Apply Lora font-family */
+    font-weight: 400; /* Reduced font-weight for lighter headers */
+}
+
+/* Styling for the price */
+.pricing-plan .price {
+    font-size: 25px; /* Зменшено розмір шрифта */
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Styling for the list of features */
+.pricing-plan ul {
+    list-style: none;
+    font-size: 18px; /* Зменшено розмір шрифта */
+    margin-top: -5px; /* Додано відступ зверху для переміщення тексту вниз */
+    margin-bottom: 30px; /* Відступ знизу */
+}
+
+.pricing-plan ul li {
+    font-size: 16px; /* Зменшено розмір шрифта */
+    padding-top: 10px; /* Відступ між елементами */
+    margin: 8px 0; /* Збережено невеликий відступ між пунктами */
+    font-family: "Mulish", sans-serif; /* Застосовується шрифт Mulish */
+}
+
+/* Styling for the buttons */
+.pricing-plan button {
+    padding: 10px 20px; /* Зменшено відступи кнопки */
+    border: 1px solid white;
+    background: none;
+    color: white;
+    font-size: 16px; /* Зменшено розмір шрифта */
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-family: "Mulish", sans-serif; /* Застосовується шрифт Mulish */
+}
+
+.about-heading-tt {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 250px;
+    position: relative;
+    top: -150px; /* Піднімає заголовок */
+}
+
+/* Styling for the About Us description */
+.about-description-tt {
+    font-size: 2.5rem; /* Increase font size */
+    font-weight: 300; /* Set font weight to 400 for slightly thicker text */
+    line-height: 1;
+    margin-top: -150px; /* Adjust the value to move the text up */
+    padding-left: 50px;
+    text-align: center; /* Center the text horizontally */
+}
+
+/* Container for all features */
+.features-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Align to the right */
+    gap: 5px;
+}
+
+/* Text container styling */
+.feature-content {
+    text-align: left;
+    padding-right: 93px;
+    padding-top: 10px;
+    
+}
+
+  .iconki-cont-two{
+    margin-right: 150px; /* Відступ для вирівнювання зображення */
+    margin-bottom: 20px; /* Відступ під зображенням, щоб був простір до тексту */
+    margin-top: -10px; /* Піднімаємо весь контейнер вгору */
+  }
+
+  .iconki-cont-three { 
+    margin-right: 20px; /* Відступ для вирівнювання зображення */
+    margin-bottom: 20px; /* Відступ під зображенням, щоб був простір до тексту */
+    margin-top: -10px; /* Піднімаємо весь контейнер вгору */
+}
+
+/* Container for positioning */
+.container {
+    position: relative; /* Щоб використовувати абсолютне позиціонування для зображення */
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+/* Image Section */
+.office-photo {
+    width: 110%; /* Зменшено розмір */
+    height: auto;
+    position: absolute; /* Абсолютне позиціонування для перекриття */
+    top: 40px; /* Регулює положення зображення відносно контейнера */
+    left: -235px; /* Зсуває зображення вліво */
+    z-index: 1; /* Розміщення зображення перед зеленим блоком */
+}
+
+/* Highlighted Box */
+.highlighted-box {
+    background-color: #5CCCC9; /* Зелений колір */
+    padding: 100px; /* Зменшено внутрішній відступ */
+    height: 300px; /* Зменшена висота */
+    max-width: 453px; /* Максимальна ширина */
+    position: absolute; /* Абсолютне позиціонування для точного розташування */
+    top: -110px; /* Розташування під зображенням */
+    left: 70px; /* Зсув вліво */
+    z-index: 0; /* Розміщення зеленого блоку під зображенням */
+    text-align: right; /* Вирівнювання тексту праворуч */
+}
+
+/* Main Text */
+.main-text {
+    font-family: "Mulish", sans-serif;
+    font-size: 1.1rem; /* Зменшений розмір шрифту */
+    text-align: left;
+    line-height: 1; /* Лінійна висота для однорядкового тексту */
+    color: #fff; /* Білий текст для контрасту */
+    margin-bottom: 20px;
+    margin-top: -50px; /* Верхній відступ залишається */
+    margin-left: -5px; /* Лівий відступ залишається */
+    font-weight: 500;
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* Profile Section */
+.profile-details {
+    display: flex;
+    align-items: center;
+    margin-top: 30px; /* Зменшено відступ для підйому тексту */
+}
+
+.profile-photo {
+    width: 80px; /* Збільшено розмір фото */
+    height: 80px; /* Збільшено висоту фото */
+    border-radius: 50%;
+    margin-left: -5px;
+    margin-right: 20px; /* Трохи більше простору між фото та текстом */
+}
+
+/* Profile Name */
+.profile-name {
+    font-family: "Mulish", sans-serif;
+    font-size: 1rem; /* Збільшено розмір шрифту імені */
+    font-weight: bold; /* Тільки один font-weight */
+    color: #fff; /* Білий текст для контрасту */
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+/* Profile Title */
+.profile-title {
+    font-family: "Mulish", sans-serif;
+    font-size: 0.9rem; /* Збільшено розмір шрифту титулу */
+    font-weight: 600;
+    color: #DEF5F4; /* Світліший відтінок білого для різноманітності */
+    white-space: nowrap; /* Запобігає переносу тексту */
+}
+
+}
